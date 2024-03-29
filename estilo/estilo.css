@@ -242,7 +242,6 @@
     margin-bottom: 20%;
   }
   
-  /* Cerrar el botón 'x' */
   .close {
     margin-top: 20%;
     color: #aaaaaa;
@@ -273,8 +272,6 @@
     padding: 3px 3px;
     width: 40%;
   }
-  
-  
   
   #nombreYApellidoTitular {
     text-align: center;

@@ -1,5 +1,3 @@
-///
-
 const signupForm = document.querySelector('#signupForm');
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -8,7 +6,6 @@ signupForm.addEventListener('submit', (e) => {
     const password = document.querySelector('#password').value;
     const sexo = document.querySelector('#sexo').value;
 
-    //si el usuario ya se registro anteriormente, y quiere registrarse de vuelta, no va a poder
     const Users = JSON.parse(localStorage.getItem('users')) || [];
     const isUserRegistered = Users.find(user => user.email === email);
     if (isUserRegistered) {

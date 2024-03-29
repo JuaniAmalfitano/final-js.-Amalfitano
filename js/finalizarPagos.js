@@ -1,15 +1,13 @@
 const btnFinCompra = document.getElementById("btnFinCompra");
 
 btnFinCompra.addEventListener("click", (event) => {
-    event.preventDefault(); // Evitar el envío del formulario
+    event.preventDefault(); 
 
-    // Obtener los valores de los campos
     const nombreYApellidoTitular = document.getElementById("nombreYApellidoTitular").value;
     const cardNumberInputs = document.querySelectorAll(".card-number-input");
     const expiration = document.getElementById("expiration").value;
     const cvc = document.querySelector(".cvc-input").value;
 
-    // Verificar si algún campo está vacío
     if (!nombreYApellidoTitular.trim() || Array.from(cardNumberInputs).some(input => !input.value.trim()) || !expiration.trim() || !cvc.trim()) {
         Swal.fire({
             icon: "error",
@@ -18,7 +16,6 @@ btnFinCompra.addEventListener("click", (event) => {
         });
     } else {
 
-        // Si todos los campos están completos, mostrar mensaje de éxito
         Swal.fire({
             position: "top-end",
             icon: "success",
@@ -27,8 +24,6 @@ btnFinCompra.addEventListener("click", (event) => {
             timer: 1500
         });
 
-
-        // Redirigir o realizar otras acciones después de un tiempo
         setTimeout(() => {
             window.location = "../html/cartelera.html";
             limpiarLocalStorage();

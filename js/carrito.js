@@ -1,13 +1,10 @@
 const carrito = JSON.parse(localStorage.getItem("CarritoCompras")) || [];
 
-// Variable global para almacenar el número total de entradas
 let totalEntradas = 0;
 
 function actualizarTotalEntradas() {
     totalEntradas = carrito.reduce((total, pelicula) => total + pelicula.cantidad, 0);
-    // Actualizar el número en la interfaz de usuario
     document.getElementById("total-entradas").textContent = totalEntradas.toString();
-    // Guardar el número total en el almacenamiento local si lo necesitas
     localStorage.setItem("totalEntradas", totalEntradas.toString());
 }
 
@@ -95,7 +92,6 @@ function actualizarCarrito() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Recupera el último precio total del almacenamiento local
     const ultimoTotal = localStorage.getItem("total");
 
     document.getElementById("ultimo-total").textContent = `$${ultimoTotal}`;
@@ -115,13 +111,12 @@ function removerDelCarrito(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Recuperar el último número total de entradas del almacenamiento local si lo necesitas
+
     const ultimoTotalEntradas = localStorage.getItem("totalEntradas");
     if (ultimoTotalEntradas !== null) {
         totalEntradas = parseInt(ultimoTotalEntradas);
         document.getElementById("total-entradas").textContent = totalEntradas.toString();
     }
-    // Resto del código...
 });
 
 const irAPagar = document.getElementById("botonSwal");
@@ -179,7 +174,6 @@ vaciarCarrito.addEventListener('click', () => {
         confirmButtonText: "Seguro",
         denyButtonText: `No`
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             if(carrito.length === 0) {
                 Swal.fire({

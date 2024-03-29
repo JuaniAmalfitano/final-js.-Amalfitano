@@ -13,7 +13,7 @@ if (user) {
 const logout = document.getElementById('logout');
 
 logout.addEventListener('click', (e) => {
-    e.preventDefault(); // Evita que el formulario se envíe automáticamente
+    e.preventDefault(); 
     
     Swal.fire({
         title: "¿Estás seguro que quieres cerrar sesión?",
@@ -39,7 +39,6 @@ logout.addEventListener('click', (e) => {
         }
     });
 
-//se cierra la ventana automaticamente si no respondiste nada
     setTimeout(() => {
         Swal.close();
     }, 15000);
