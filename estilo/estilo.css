@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @import url('https://fonts.cdnfonts.com/css/helvetica-255');
+  
+  .headerColor {
+    background-color: black;
+    padding-bottom: 1px;
+  }
+  
+  .linksHeader {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navItem {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .white-cart {
+    color: white;
+  }
+  
+  #total-entradas {
+    position: relative;
+    right: 70px;
+    top: -8px;
+  }
+  
+  .card {
+    background-color: #fcfcfc;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    text-transform: capitalize;
+    border: 1.5px solid #777;
+    border-radius: 5px;
+    color: #5653ed;
+  }
+  
+  .btnn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    /* Espacio entre el input y el botón */
+  }
+  
+  .btnn:hover {
+    opacity: 50%;
+    transition-duration: 0.5s;
+  }
+  
+  #btnFinalizarCompra {
+    background-color: #007bff;
+    color: white;
+    border: solid 2px black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #btnFinalizarCompra:hover {
+    opacity: 50%;
+    transition-duration: 0.5s;
+  }
+  
+  .ContenedorTitulo {
+    display: -webkit-box;
+    max-width: 100%;
+    min-height: 38px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .precio {
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    font-size: 18px;
+  }
+  
+  .containerComprar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  
+  .btnComprar {
+    background-color: #007bff;
+    color: white;
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+  }
+  
+  .btnComprar:hover {
+    opacity: 50%;
+    transition-duration: 0.5s;
+  }
+  
+  .buscador {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  
+  .inpBuscador {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .nombreProd {
+    font-size: 20px;
+    height: 33px;
+    width: 100%;
+    border: #000 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .precioProd {
+    width: 75%;
+    height: 33px;
+    border: #000 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .carrito-item {
+    background-color: #f1efef;
+    border: #000 solid 3px;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 10px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+  }
+  
+  .carrito-item-info h4 {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  
+  .fotoCarrito {
+    width: 75px;
+  }
+  
+  .btnIrAPagar {
+    height: auto;
+    width: auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carrito-item-remove {
+    height: auto;
+    width: auto;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carrito-item-remove:hover {
+    background-color: #c82333;
+  }
+  
+  .ContainerIrAPagar {
+    background-color: #6a9cd1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 410px;
+    padding-bottom: 15px;
+  }
+  
+  #carrito-total {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #confirmBtn {
+    background-color: green;
+    width: 10%;
+    text-align: center;
+    margin-bottom: 20%;
+  }
+  
+  /* Cerrar el botón 'x' */
+  .close {
+    margin-top: 20%;
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    width: 40px;
+  
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-pasarela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000 1px solid;
+    padding: 3px 3px;
+    width: 40%;
+  }
+  
+  
+  
+  #nombreYApellidoTitular {
+    text-align: center;
+    width: 50%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .card-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-number-input {
+    text-align: center;
+    width: 75px;
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #expiration,
+  .cvc-input {
+    text-align: center;
+    width: 25%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .hideExp {
+    display: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* ------------------------------------------------------------------INICIAR SESION------------------------------------------------------------------*/
+  
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+  }
+  
+  .container-general {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/inicioSesion/cinema-movie-horizontal-banner-hall-cartoon-style-vector.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+  }
+  
+  .form-box {
+    top: 50px;
+    background-color: #fff;
+    width: 400px;
+    height: 455px;
+    position: relative;
+    margin: 6% auto;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .input-container {
+    top: 125px;
+    left: 50px;
+    position: absolute;
+    width: 280px;
+    transition: 0.8s;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: transparent;
+  }
+  
+  .submit-boton {
+    background-color: #03c6e9;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+  }
+  
+  
+  
+  
+  
+  /* CARRITOOOOOOOOOOOO */
+  
+  #abrirCarrito {
+    cursor: pointer;
+  }
+  
+  #ventanaLateral {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 450px;
+    height: 100%;
+    background-color: whitesmoke;
+    padding: 20px;
+    transition: right 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    /* Ajusta este valor según sea necesario */
+    overflow-y: auto;
+  }
+  
+  
+  #ventanaLateral.active {
+    right: 0;
+  
+  }
+  
+  #cerrarVentana {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  #listaProductos {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #listaProductos li {
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  #ultimo-total {
+    font-size: 50px;
+  }
+  
+  .container-ultimo-total {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #btnFinCompra {
+    background-color: #007bff;
+    color: white;
+    border: solid 2px black;
+    width: 9rem;
+    height: 3rem;
+  }
+  
+  .cargando-pelis {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* -------------------------------------- PAGINA DE MANTENIMIENTO -------------------------------------- */
+  .maintenance-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c72626;
+  }
+  
+  .maintenance-content {
+    margin-top: 90px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .maintenance-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .maintenance-content p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .buttonIrInicio {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttonIrInicio:hover {
+    background-color: #0056b3;
+  }
+  
+  .container-resumen {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    /* Para centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    /* Para alinear verticalmente */
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7e9;
+    border: solid black 2px;
+  }
+  
+  .container-resumen h4 {
+    text-transform: capitalize;
+  }
+  
+  .carrito-item-resumen {
+    width: 550px;
+  }
+  
+  .titulo-container {
+    max-width: 100%; 
+  }
+  
+  .titulo-container h4 {
+    white-space: normal; 
+  }
+  
